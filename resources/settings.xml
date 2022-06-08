@@ -1,31 +1,164 @@
-<settings>
-    <category label="Receiver Setup">
-        <setting label="100" type="lsep" />
-        <setting default="" id="avr_ip" label="AVR IP" type="ipaddress" />
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings version="1">
+  <section id="script.kodi.denon.control">
+    <category id="ipaddress" label="33000">
+       <group id="0">
+         <setting id="avr_ip" label="33010" type="string" >
+           <level>0</level>
+           <default>192.168.0.0</default>
+           <control type="edit" format="ip">
+              <heading>150</heading>
+           </control>
+         </setting>
+       </group>
     </category>
-    <category label="Music Settings">
-        <setting label="Audyssey" type="lsep" />
-        <setting default="true" id="music_audyssey_enable" label="Adjust Audyssey Settings" type="bool" />
-        <setting default="2" id="music_audyssey_mode" label="MultEQ XT32" type="enum" lvalues="33100|33101|33102|33103" visible="eq(-1,true)" />
-        <setting default="true" id="music_audyssey_dyneq" label="Dynamic EQ" type="bool" visible="eq(-2,true) + gt(-1,0)" />
-        <setting default="0" id="music_audyssey_dynvol" label="Dynamic Volume" type="enum" lvalues="33100|33104|33105|33106" visible="eq(-3,true) + gt(-2,0)" />
-
-        <setting label="Surround-Parameter (TODO)" type="lsep" />
-        <setting label="Restorer (TODO)" type="lsep" />
-        
-        <setting label="Graphic-EQ" type="lsep" />
-        <setting default="0" id="music_graphic_eq" label="Graphic-EQ Mode" type="enum" lvalues="33200|33201|33202" enable="eq(-7,false)" />
+    <category id="music" label="33001">
+       <group id="0">
+         <setting id="music_audyssey_enable" label="33011" type="boolean">
+           <level>0</level>
+           <default>true</default>
+           <control type="toggle"/>
+         </setting>
+         <setting id="music_audyssey_mode" label="33012" type="integer">
+           <level>0</level>
+           <default>2</default>
+           <control format="string" type="spinner"/>
+           <constraints>
+              <options>
+                 <option label="33100">0</option>
+                 <option label="33101">1</option>
+                 <option label="33102">2</option>
+                 <option label="33103">3</option>
+              </options>
+           </constraints>
+           <dependencies>
+	     <dependency type="visible">
+               <condition operator="is" setting="music_audyssey_enable">true</condition>
+             </dependency>
+           </dependencies>
+         </setting>
+         <setting id="music_audyssey_dyneq" label="33013" type="boolean">
+           <level>0</level>
+           <default>true</default>
+           <control type="toggle"/>
+           <dependencies>
+	     <dependency type="visible">
+               <condition operator="is" setting="music_audyssey_enable">true</condition>
+             </dependency>
+           </dependencies>
+         </setting>
+         <setting id="music_audyssey_dynvol" label="33014" type="integer">
+           <level>0</level>
+           <default>0</default>
+           <control format="string" type="spinner"/>
+           <constraints>
+              <options>
+                 <option label="33100">0</option>
+                 <option label="33104">4</option>
+                 <option label="33105">5</option>
+                 <option label="33106">6</option>
+              </options>
+           </constraints>
+           <dependencies>
+	     <dependency type="visible">
+               <condition operator="is" setting="music_audyssey_enable">true</condition>
+             </dependency>
+           </dependencies>
+         </setting>
+       </group>
+       <group id="1">
+         <setting id="music_graphic_eq" label="33015" type="integer">
+           <level>0</level>
+           <default>0</default>
+           <control format="string" type="spinner"/>
+           <constraints>
+              <options>
+                 <option label="33200">0</option>
+                 <option label="33201">1</option>
+                 <option label="33202">2</option>
+              </options>
+           </constraints>
+           <dependencies>
+	     <dependency type="visible">
+               <condition operator="is" setting="music_audyssey_enable">true</condition>
+             </dependency>
+           </dependencies>
+         </setting>
+       </group>
     </category>
-    <category label="Video Settings">
-        <setting label="Audyssey" type="lsep" />
-        <setting default="true" id="video_audyssey_enable" label="Adjust Audyssey Settings" type="bool" />
-        <setting default="1" id="video_audyssey_mode" label="MultEQ XT32" type="enum"  lvalues="33100|33101|33102|33103" visible="eq(-1,true)" />
-        <setting default="true" id="video_audyssey_dyneq" label="Dynamic EQ" type="bool" visible="eq(-2,true) + gt(-1,0)" />
-        <setting default="0" id="video_audyssey_dynvol" label="Dynamic Volume" type="enum" lvalues="33100|33104|33105|33106" visible="eq(-3,true) + gt(-2,0)" />
-        
-        <setting label="Surround-Parameter (TODO)" type="lsep" />
-        <setting label="Restorer (TODO)" type="lsep" />
-        <setting label="Graphic-EQ" type="lsep" />
-        <setting default="0" id="video_graphic_eq" label="Graphic-EQ Mode" type="enum" lvalues="33200|33201|33202" enable="eq(-7,false)" />
+    <category id="video" label="33002">
+       <group id="0">
+         <setting id="video_audyssey_enable" label="33011" type="boolean">
+           <level>0</level>
+           <default>true</default>
+           <control type="toggle"/>
+         </setting>
+         <setting id="video_audyssey_mode" label="33012" type="integer">
+           <level>0</level>
+           <default>1</default>
+           <control format="string" type="spinner"/>
+           <constraints>
+              <options>
+                 <option label="33100">0</option>
+                 <option label="33101">1</option>
+                 <option label="33102">2</option>
+                 <option label="33103">3</option>
+              </options>
+           </constraints>
+           <dependencies>
+	     <dependency type="visible">
+               <condition operator="is" setting="video_audyssey_enable">true</condition>
+             </dependency>
+           </dependencies>
+         </setting>
+         <setting id="video_audyssey_dyneq" label="33013" type="boolean">
+           <level>0</level>
+           <default>true</default>
+           <control type="toggle"/>
+           <dependencies>
+	     <dependency type="visible">
+               <condition operator="is" setting="video_audyssey_enable">true</condition>
+             </dependency>
+           </dependencies>
+         </setting>
+         <setting id="video_audyssey_dynvol" label="33014" type="integer">
+           <level>0</level>
+           <default>0</default>
+           <control format="string" type="spinner"/>
+           <constraints>
+              <options>
+                 <option label="33100">0</option>
+                 <option label="33104">4</option>
+                 <option label="33105">5</option>
+                 <option label="33106">6</option>
+              </options>
+           </constraints>
+           <dependencies>
+	     <dependency type="visible">
+               <condition operator="is" setting="video_audyssey_enable">true</condition>
+             </dependency>
+           </dependencies>
+         </setting>
+       </group>
+       <group id="1">
+         <setting id="video_graphic_eq" label="33015" type="integer">
+           <level>0</level>
+           <default>0</default>
+           <control format="string" type="spinner"/>
+           <constraints>
+              <options>
+                 <option label="33200">0</option>
+                 <option label="33201">1</option>
+                 <option label="33202">2</option>
+              </options>
+           </constraints>
+           <dependencies>
+	     <dependency type="visible">
+               <condition operator="is" setting="video_audyssey_enable">true</condition>
+             </dependency>
+           </dependencies>
+         </setting>
+       </group>
     </category>
+  </section>
 </settings>

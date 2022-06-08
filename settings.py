@@ -1,4 +1,4 @@
-import xbmcaddon
+from xbmcaddon import Addon
 
 class Settings(object):
     """
@@ -18,7 +18,7 @@ class Settings(object):
     ]
 
     def __init__( self, *args, **kwargs ):
-        self.addon = xbmcaddon.Addon()
+        self.addon = Addon()
         self.read_settings()
     
     def get_audyssey_mode(self, setting_id):

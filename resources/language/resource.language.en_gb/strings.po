@@ -1,0 +1,95 @@
+# Kodi Media Center language file
+# Addon Name: Kodi Denon Control
+# Addon id: script.kodi.denon.control
+# Addon Provider: bitstreamout
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: https://github.com/bitstreamout/script.kodi.denon.control/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Team-Kodi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#33000"
+msgid "Receiver Setup"
+msgstr ""
+
+msgctxt "#33001"
+msgid "Music Settings"
+msgstr ""
+
+msgctxt "#33002"
+msgid "Video Settings"
+msgstr ""
+
+
+msgctxt "#33010"
+msgid "AVR IP-Address"
+msgstr ""
+
+msgctxt "#33011"
+msgid "Adjust Audyssey Settings"
+msgstr ""
+
+msgctxt "#33012"
+msgid "MultEQ XT32"
+msgstr ""
+
+msgctxt "#33013"
+msgid "Dynamic EQ"
+msgstr ""
+
+msgctxt "#33014"
+msgid "Dynamic Volume"
+msgstr ""
+
+msgctxt "#33015"
+msgid "Graphic-EQ Mode"
+msgstr ""
+
+msgctxt "#33100"
+msgid "Off"
+msgstr ""
+
+msgctxt "#33101"
+msgid "Reference"
+msgstr ""
+
+msgctxt "#33102"
+msgid "L/R Bypass"
+msgstr ""
+
+msgctxt "#33103"
+msgid "Flat"
+msgstr ""
+
+msgctxt "#33104"
+msgid "Light"
+msgstr ""
+
+msgctxt "#33105"
+msgid "Medium"
+msgstr ""
+
+msgctxt "#33106"
+msgid "Heavy"
+msgstr ""
+
+# 
+msgctxt "#33200"
+msgid "Don't change setting"
+msgstr ""
+
+msgctxt "#33201"
+msgid "Off"
+msgstr ""
+
+msgctxt "#33202"
+msgid "On"
+msgstr ""
