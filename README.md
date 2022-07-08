@@ -14,6 +14,7 @@ Then this addon might do the trick for you!
 ## Which devices are supported?
 
 All Denon 2015 AV Receivers should be supported. I have tested this with an AVR-X6200W.
+And only Denon AV Receivers and Amplifiers which provide a Web-Interface.
 
 ## Does this addon have any dependencies?
 
